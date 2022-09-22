@@ -47,7 +47,7 @@ public class PlaneterySystemFactory : MonoBehaviour, IPlaneterySystemFactory
                     );                
                 
                 float radius =
-                    systemComponent.planeteryObjects.Sum(po => po.radius) +
+                    systemComponent.planeteryObjects.Sum(po => po.radius * 0.5f) +
                     planeteryComponent.massClass.planetRadiusTo * Config.planetStepFactor +
                     Config.sunSize;
 
